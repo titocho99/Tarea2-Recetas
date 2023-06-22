@@ -11,7 +11,7 @@ const IngredienteList = ({ name, ingredientes, tiempo, image }) => {
         <h2>
           <strong>Ingredientes:</strong>
         </h2>
-        <ul className="marker:text-sky-400  pl-2 text-slate-500">
+        <ul className="list-disc marker:text-sky-400  pl-2 text-slate-500">
           {ingredientes.map((ingrediente, i) => (
             <li key={i} className="py-2 flex">
               {ingrediente.item}

@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-const RecetastForm = ({ onSubmit, datos }) => {
+const RecetastForm = ({ onSubmit }) => {
   const [formFields, setFormFields] = useState([{ item: "" }]);
 
   const submit = (event) => {
@@ -9,7 +8,8 @@ const RecetastForm = ({ onSubmit, datos }) => {
     const name = form[0].value;
     const ingredientes = formFields;
     const tiempo = form[1].value;
-    const image ="https://www.recetaslamasia.es/wp-content/uploads/2015/11/planning_30nov-4dic_720.png";
+    const image =
+      "https://www.recetaslamasia.es/wp-content/uploads/2015/11/planning_30nov-4dic_720.png";
     const dato = { name, ingredientes, tiempo, image };
     onSubmit(dato);
     form.reset();

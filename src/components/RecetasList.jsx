@@ -59,7 +59,7 @@ const RecetasList = ({ title }) => {
         {title}, {recetasCount}
       </h1>
       <RecetastForm onSubmit={addDatos} datos={datos} />
-      <div className="grid grid-cols-4 divide-x mr-4">
+      <div className="container grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-3 divide-x mr-4">
         {datos.map((dato, i) => (
           <IngredienteList key={i} {...dato} />
         ))}
